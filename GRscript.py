@@ -1,8 +1,6 @@
 from subprocess import call
 
-dtfactor = 0.1
-tmax = 5.e10
-integrators = [None, "implicit_midpoint", "rk4"]
-
-for integrator in integrators:
-    call("python GR.py {0} {1} {2} &".format(dtfactor, integrator, tmax), shell=True)
+call("python GR.py 0.080901699437494756 whfast euler 2e10 1 1 &", shell=True)
+call("python GR.py 0.080901699437494756 whfast rk2 2e10 1 1 &", shell=True)
+call("python GR.py 0.080901699437494756 whfast rk4 2e10 1 1 &", shell=True)
+call("python GR.py 0.080901699437494756 whfast implicit_midpoint 2e10 1 1 &", shell=True)
