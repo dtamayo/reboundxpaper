@@ -2,7 +2,6 @@ import rebound
 import reboundx
 import numpy as np
 import sys
-import time
 
 def k2137b(dtfactor, e):
     sim = rebound.Simulation()
